@@ -41,4 +41,8 @@
     <string name="Repeat_Password">Repeat Password</string>
     <string name="Stop_music">Stop the music</string>
     <string name="Play_music">Play the music</string>
+    <string name="title_user">Title User</string>
+    <string name="empezarJuego">Play</string>
+    <string name="Escoge2">Pick a character from your list. Remember that you will not be able to change until you change the map</string>
+    <string name="Escoge">"Pick an item from your list. Remember that you will not be able to change until you change the map "</string>
 </resources>

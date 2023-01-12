@@ -10,11 +10,11 @@
     <string name="surname">Surname</string>
     <string name="name">Name</string>
     <string name="password_reg">Password</string>
-    <string name="gmail">Gmail</string>
+    <string name="gmail">Email</string>
     <string name="username_reg">Username</string>
     <string name="ok">ok</string>
     <string name="cancel">Cancel</string>
-    <string name="gmail_log">Gmail</string>
+    <string name="gmail_log">Email</string>
     <string name="birth_date">Birth date</string>
     <string name="list_of_objects">List of objects</string>
     <string name="textview">TextView</string>
@@ -32,6 +32,8 @@
         <item name="Italian">Italian</item>
         <item name="French">French</item>
         <item name="Portuguese">Portuguese</item>
+        <item name="Chino">Chinese</item>
+        <item name="Arabic">Arabic</item>
     </string-array>
     <string name="btnConfChanges">Apply Changes</string>
     <string name="jugar">Play</string>
@@ -49,5 +51,7 @@
     <string name="Stop_music">Stop the music</string>
     <string name="Play_music">Play the music</string>
     <string name="title_user">Title User</string>
-    <string name="empezarJuego">Jugar</string>
+    <string name="empezarJuego">Play</string>
+    <string name="Escoge">"Pick an item from your list. Remember that you will not be able to change until you change the map "</string>
+    <string name="Escoge2">Pick a character from your list. Remember that you will not be able to change until you change the map</string>
 </resources>

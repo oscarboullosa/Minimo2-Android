@@ -44,6 +44,10 @@ public class MainSplashScreen extends AppCompatActivity {
             case "Portuguese":
                 config.setLocale(new Locale("pt")); // establecemos el idioma español
                 break;
+            case "Chinese":
+                config.setLocale(new Locale("zh")); //Chino tradicional
+            case "Arabic":
+                config.setLocale(new Locale("ar")); //árabe
 
         }
         res.updateConfiguration(config, res.getDisplayMetrics()); // aplicamos los cambios

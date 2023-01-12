@@ -41,4 +41,8 @@
     <string name="Repeat_Password">Ripeti la parola d´ordine</string>
     <string name="Stop_music">Fermare la musica</string>
     <string name="Play_music">Accendi la musica</string>
+    <string name="title_user">Titolo utente</string>
+    <string name="empezarJuego">Giocare</string>
+    <string name="Escoge2">"Scegli un personaggio dalla tua lista. Ricorda che non sarai in grado di cambiare fino a quando non cambierai la mappa "</string>
+    <string name="Escoge">"Scegli un elemento dalla tua lista. Ricorda che non sarai in grado di cambiare fino a quando non cambierai la mappa "</string>
 </resources>

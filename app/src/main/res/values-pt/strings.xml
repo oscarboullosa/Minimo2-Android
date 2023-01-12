@@ -41,4 +41,8 @@
     <string name="Apply_Changes">Aplicar mudanças</string>
     <string name="Stop_music">" Pare a musica"</string>
     <string name="Play_music">Liga a música</string>
+    <string name="empezarJuego">Jogar</string>
+    <string name="title_user">Título de usuário</string>
+    <string name="Escoge">Escolha um item da sua lista. Lembre-se que você não poderá mudar até que mude o mapa</string>
+    <string name="Escoge2">"Escolha um personagem da sua lista. Lembre-se que você não poderá mudar até que mude o mapa "</string>
 </resources>

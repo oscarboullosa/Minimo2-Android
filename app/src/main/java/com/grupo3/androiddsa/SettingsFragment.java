@@ -18,8 +18,15 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.grupo3.androiddsa.retrofit.Api;
 
 import java.util.Locale;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class SettingsFragment extends Fragment implements AdapterView.OnItemSelectedListener, View.OnClickListener{
 
@@ -82,9 +89,33 @@ public class SettingsFragment extends Fragment implements AdapterView.OnItemSele
         cambiarIdioma();
         Intent intent = new Intent(getActivity(), MainSplashScreen.class);
         getActivity().startActivity(intent);
+        Api service= Api.retrofit.create(Api.class);
+        SharedPreferences preferencias=getActivity().getSharedPreferences("datos", Context.MODE_PRIVATE);
+        SharedPreferences prefeprefe = getActivity().getSharedPreferences("mi_archivo_preferencias", MODE_PRIVATE);
+        String email = preferencias.getString("mail","");
+        String language=prefeprefe.getString("idioma",idioma);
+        Call<Void> call=service.updateLanguage(email,idioma);
+        call.enqueue(new Callback<Void>() {
+            @Override
+            public void onResponse(Call<Void> call, Response<Void> response) {
+                        switch(response.code()){
+                            case 200:
+                                Toast.makeText(view.getContext(), "Cambios aplicados", Toast.LENGTH_LONG).show();
+                                break;
+                            case 500:
+                                Toast.makeText(view.getContext(), "Falta info", Toast.LENGTH_LONG).show();
+                                break;
+                        }
+            }
 
+            @Override
+            public void onFailure(Call<Void> call, Throwable t) {
+                Toast.makeText(view.getContext(), "Fail", Toast.LENGTH_LONG).show();
+            }
+        });
 
     }
+
 
     public void cambiarIdioma() {
         Resources res = getResources(); // obtenemos una instancia de Resources
@@ -104,6 +135,12 @@ public class SettingsFragment extends Fragment implements AdapterView.OnItemSele
                 break;
             case "Portuguese":
                 config.setLocale(new Locale("pt")); // establecemos el idioma español
+                break;
+            case "Chinese":
+                config.setLocale(new Locale("zh"));//chino tradicional
+                break;
+            case "Arabic":
+                config.setLocale(new Locale("ar"));//árabe
                 break;
 
         }

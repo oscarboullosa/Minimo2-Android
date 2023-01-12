@@ -24,6 +24,9 @@ public interface Api {
     @POST("gameManager/user/login")
     Call<Void> logInUser(@Body Credentials credentials);
 
+    @PUT("gameManager/user/{email}/{language}")
+    Call<Void> updateLanguage(@Path("email") String email, @Path("language") String language);
+
     @POST("gameManager/user")
     Call<User> registerUser(@Body UserRegister userRegister);
 
